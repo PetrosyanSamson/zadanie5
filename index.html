@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">  
+    <link rel="stylesheet" href="style.css">
+
+    <title>Задание 2</title>
+</head>
+<body>
+    <div id="main-aside-wrapper"></div>
+    <header class="main">
+            <div class="main__wrapper">
+                <div class="main__logo">
+                    <img src="logo.png" class="main__logo-img" alt="#">
+                    <div class="main__logo-name">
+                        <p>Кубанский Государственный Университет</p>
+                    </div>
+                </div>
+                <div class="main__links">
+                    <ul class="main__link">
+                        <li><a href="#form">Форма</a></li>
+                        <li><a href="#table--link">Таблица</a></li>
+                        <li><a href="#calk">Калькулятор</a></li>
+                        <li><a href="page1.html">Другие страницы</a></li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+        
+    </header>
+
+    <div class="main__wrapper">
+        
+
+        <nav class="navigation">
+            <div class="navigation__links">
+                <h2>Гиперссылки</h2>
+                <ul>
+                    <!--1-->
+                    <li><a href="http://kubsu.ru">Кубгу</a></li>
+                    <!--2-->
+                    <li><a href="https://kubsu.ru">Кубгу</a></li>
+                    <!--3-->
+
+
+                    <li><a href="httpS://kubsu.ru"><img src="ima1.jpg"  alt="кубик" class="ima"></a></li>
+                    
+                    <!--4-->
+                    <li><a href="#form">ссылка на внутреннюю страницу</a></li>
+                    <!--5-->
+                    <li><a href="http://kubsu.ru">Ссылка на главную</a></li>
+                    <!--6-->
+                    <li><a href="#form">Ccылкa на фрагмент</a></li>
+                    <!--7-->
+                    <li><a href=" https://petrosyansamson.github.io/zadanie2/?param1=1&param2=2&param3=3">Ссылка с 3-мя параметрами</a></li>
+                    <!--8-->
+                    <li><a href="index.html">Главная страница</a></li>
+                    <!--9-->
+                    <li><a href="#form">С параметром id</a></li>
+                    <!--10-->
+                    <li><a href="about.html">about</a></li>
+                    <!--11-->
+                    <li><a href="page2.html"> на страницу в каталоге уровнем выше текущего</a></li>
+                    <!--12-->
+                    <li><a href="page3.html">на страницу в каталоге двумя уровнями выше</a></li>
+                    <!--13-->
+                    <li><p>контекстная <a href="#">ссылка</a> в тексте абзаца</p></li>
+                    <!--14-->
+                    <li><a href="https://www.youtube.com/">На внешний ресурс</a></li>
+                    <!--15-->
+                    <li>
+                        <map name="clickable">
+                            <area shape="circle" coords="309,164,60" href="httpS://kubsu.ru" alt = "#">
+                            <area shape="rect" coords="185,125,268,352" href="https://youtube.com" alt = "#">
+                        </map>
+                            <img usemap="#clickable" src="ima.png" alt="picture" class="ima">
+                    </li>    
+                    <!--16-->
+                    <li><a href="#">Пустая ссылка</a></li>
+                    <!--17-->
+                    <li><a>Ссылка без href</a></li>
+                    <!--18-->
+                    <li><a href="http://kubsu.ru" rel="nofollow">запрещающая переход</a></li>
+                    <!--19-->
+                    <li><a href="http://kubsu.ru" rel="noindex">запрещаяющая индексацию</a></li>
+                    <!--20-->
+                    
+                        <ol>
+                            <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Fphotos%2F%25D0%25BF%25D1%2580%25D0%25B8%25D1%2580%25D0%25BE%25D0%25B4%25D0%25B0&psig=AOvVaw2_a98boFl9RCVUSO7DFXuG&ust=1695798634115000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOCc18fcx4EDFQAAAAAdAAAAABAJ" title="что то 1">Много картинок</a></li>
+                            <li> <a href="https://timeweb.com/media/articles/0001/08/thumb_7309_articles_standart.jpeg" title="что то 2">Картинка :></a></li>
+                        </ol>
+                       
+                <!--21-->
+                <li> <a href="ftp://pr:123@test.rebex.net/www/213">Файл на ftp</a></li>   
+            </ul>
+            </div>
+            
+        </nav>
+        <!--Таблица (Расписание пар)-->
+       
+        <section Id="table--link" class="table">
+            
+            <div class="title"><h2>Расписание пар</h2></div>
+            <table class="table">
+                
+               <tbody>
+                    <tr class="table__element table__element-odd">
+                        <th>День недели</th>
+                        <th>Начало пар</th>
+                        <th>Окончание пар</th>
+                        <th>Количество пар</th>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Понедельник</td>
+                        <td>9:30</td>
+                        <td>15.30</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Вторник</td>
+                        <td>8:00</td>
+                        <td>14:00</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Среда</td>
+                        <td>8:00</td>
+                        <td>10:50</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Четверг</td>
+                        <td>11:10</td>
+                        <td>12:30</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Пятница</td>
+                        <td>8:00</td>
+                        <td>12:30</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Суббота</td>
+                        <td colspan="3"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </section>
+    </div>
+<ul>
+   
+        <form id="form" action="#">
+            <h2>Форма</h2>
+            <p>
+                
+                <input required type="text" name="name" placeholder="Имя"><Br>
+                <input required type="tel" name="tel" placeholder="телефон"><Br>
+                <input required type="email" name="email" placeholder="e-mail"><br>
+                <input required type="date" name="date" ><Br>
+                <br>
+                <h2>Пол </h2>
+                <input required type="radio" name="sex" value="">Мужской<Br>
+                <input type="radio" name="sex" value="">Женский<Br>
+                <br>
+                <h2>Любимый язык программирования </h2>
+                <div class="size_block">
+                    <label>
+                <input type="checkbox" name="lang" value="">pascal<Br>
+                <input type="checkbox" name="lang" value="">C<Br>
+                <input type="checkbox" name="lang" value="">C++<Br>
+                <input type="checkbox" name="lang" value="">JS<Br>
+                <input type="checkbox" name="lang" value="">PHP<Br>
+                <input type="checkbox" name="lang" value="">Python<Br>
+                <input type="checkbox" name="lang" value="">Java<Br>
+                <input type="checkbox" name="lang" value="">Haskel<Br>
+                <input type="checkbox" name="lang" value="">Clojure<Br>
+                <input type="checkbox" name="lang" value="">Prolog<Br>
+                <input type="checkbox" name="lang" value="">Scala<Br>
+                <br>
+                </div>
+                <textarea name="bio" id="bio"  placeholder="Биография" cols="30" rows="3"></textarea><Br>
+                <input required type="checkbox" name="agree" >с контрактом ознакомлен(а)<Br>
+                
+                
+                <input type="submit">
+                </label>
+            <p>
+        </form>
+    
+    </div>  
+    
+</ul>
+
+
+
+<section id="calk">
+<h2>Калькулятор товаров</h2>
+<h2>
+<!— Форма для выбора товара и ввода количества —>
+<form id="calculatorForm">
+<label for="product">Выберите товар:</label>
+<select id="product">
+<option value="0">Выберите товар</option>
+<option value="20000">Процессор 20000р</option>
+<option value="35000">Видеокарта 35000р</option>
+<option value="10000">Оперативная память 10000р</option>
+</select>
+
+<label for="quantity">Количество товара:</label>
+<input type="number" id="quantity" step="1" value="1" required>
+<br>
+<input type="button" value="Посчитать сумму" onclick="calculateTotal()">
+</form>
+
+<!— Элемент для отображения суммы —>
+<p id="total">Сумма: </p>
+
+
+
+
+<!-- Функция для расчета суммы и отображения результата -->
+<script defer src="calk.js"> </script>
+</section>
+
+    <footer class="footer">
+            <p>
+                это подвал... скелет поцеловал
+            </p>
+
+            
+       
+    </footer>
+
+
+
+</body>
+</html>
