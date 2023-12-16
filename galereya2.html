@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Галерея изображений</title>
+  <link rel="stylesheet" href="cssgal.css">
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="slider">
+        <div class="slides">
+          <img src="img_5terre_wide.jpg" alt="Image 1">
+          <img src="img_city_wide.jpg" alt="Image 2">
+          <img src="img_lights_wide.jpg" alt="Image 3">
+          <img src="img_mountains_wide.jpg" alt="Image 4">
+          <img src="img_nature_wide.jpg" alt="Image 5">
+          <img src="img_snow_wide.jpg" alt="Image 6">
+          <img src="img_snowgor_wide.jpg" alt="Image 7">
+          <img src="img_woods_wide.jpg" alt="Image 8">
+        </div>
+      </div>
+      <div class="controls">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+    </div>
+    <div class="pager"></div><div class="mobile-pager"></div>
+
+  </div>
+  <button id="goToIndexBtn">Перейти на главную</button>
+  <script src="javagal.js"></script>
+  <script>
+    document.getElementById('goToIndexBtn').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Стили для галереи */
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slides img {
+    flex: 0 0 33.33%; /* Определяет ширину каждого изображения в галерее */
+    scroll-snap-align: start;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Стили для пейджера */
+  .pager {
+    text-align: center;
+  }
+  
+  .pager span {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+

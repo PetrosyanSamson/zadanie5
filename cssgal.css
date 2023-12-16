@@ -1,0 +1,128 @@
+.gallery-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slides {
+  display: flex;
+  gap: 10px;
+}
+
+.slides img {
+  flex: 0 0 calc(100% / 3 - 10px);
+  max-width: 100%;
+  max-height: 200px;
+  height: auto;
+  margin-right: -10px;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Расположение кнопки влево */
+  transform: translateY(-50%);
+}
+
+.prev {
+  font-size: 20px;
+}
+
+.next {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: -1470px; /* Расположение кнопки вправо */
+  transform: translateY(-50%);
+}
+
+.pager {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+body {
+  background-color: rgb(154, 154, 154);
+}
+
+@media screen and (max-width: 600px) {
+  .slides {
+    display: block; /* Изображения будут отображаться блоком, по одному */
+    overflow-x: auto; /* Добавляем горизонтальный скролл */
+    white-space: nowrap; /* Отменяем перенос строк */
+  }
+  
+  .slides img {
+    width: 100%; /* Ширина автоматически подстраивается под высоту */
+    height: 200px; /* Фиксированная высота для изображений на смартфонах */
+    display: inline-block; /* Устанавливаем изображения в строчный блок */
+  }
+
+.pager {
+  display: none; /* Скрыть пейджер на мобильных устройствах */
+}
+
+.prev,
+  .next {
+    display: none; /* Скрыть кнопки "влево" и "вправо" на мобильных устройствах */
+  }
+
+  .pager {
+    text-align: center; /* Выравнивание по центру */
+    margin-top: 10px; /* Отступ сверху */
+  }
+
+  .pager span {
+    display: inline-block; /* Размещение элементов в строку */
+    width: 10px; /* Ширина маркера */
+    height: 10px; /* Высота маркера */
+    border-radius: 50%; /* Создание круглых маркеров */
+    background-color: gray; /* Цвет маркера */
+    margin: 0 5px; /* Отступ между маркерами */
+    cursor: pointer; /* Изменение курсора при наведении */
+  }
+
+  .pager span.active {
+    background-color: black; /* Цвет активного маркера */
+  }
+
+
+
+
+  @media screen and (max-width: 600px) {
+    .mobile-pager {
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .mobile-pager span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: gray;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  
+    .mobile-pager span.active {
+      background-color: black;
+    }
+  }
+  
+}

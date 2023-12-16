@@ -201,7 +201,7 @@
 
 
 
-<section id="calk">
+<!-- <section id="calk">
 <h2>Калькулятор товаров</h2>
 <h2>
 <!— Форма для выбора товара и ввода количества —>
@@ -221,14 +221,91 @@
 </form>
 
 <!— Элемент для отображения суммы —>
-<p id="total">Сумма: </p>
+<p id="total">Сумма: </p> -->
 
 
 
 
-<!-- Функция для расчета суммы и отображения результата -->
-<script defer src="calk.js"> </script>
+
+
+
+
+
+
+
+
+
+
+
+<section id="calk">
+<head>
+    <title>Калькулятор стоимости услуги</title>
+</head>
+<body>
+    <h1>Калькулятор стоимости услуги</h1>
+    <form id="calculator-form">
+        <label for="quantity">Количество:</label>
+        <input type="number" id="quantity" min="1" required><br>
+
+        <label>Выберите тип услуги:</label><br>
+        <input type="radio" name="service" value="service1"> Услуга 1<br>
+        <input type="radio" name="service" value="service2"> Услуга 2<br>
+        <input type="radio" name="service" value="service3"> Услуга 3<br>
+
+        <div id="options-container">
+            <label for="options">Выберите опцию:</label>
+            <select id="options">
+                <option value="option1">Опция 1</option>
+                <option value="option2">Опция 2</option>
+            </select>
+        </div>
+
+        <div id="property-container">
+            <label for="property">Выберите свойство товара:</label>
+            <input type="checkbox" id="property" value="property1"> Свойство 1
+        </div>
+
+        <p>Итоговая стоимость: <span id="total-price">0</span></p>
+    </form>
+
+    <script src="calculator.js"></script>
+</body>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="galereya.html"> галерея</a></li>
+
+
+
+
+<li><a href="galereya2.html"> gal</a></li>
+
+<!-- <li><a href="svyaz.html">Обратная связь</a></li> -->
+
+
+
+
+
+
 
     <footer class="footer">
             <p>
@@ -238,8 +315,6 @@
             
        
     </footer>
-
-
 
 </body>
 </html>

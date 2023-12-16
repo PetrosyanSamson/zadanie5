@@ -1,0 +1,42 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelector(".slides");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const pager = document.querySelector(".pager");
+  
+    const slideWidth = slides.clientWidth;
+  
+    // Рассчитываем количество страниц и создаем пейджер
+    const totalPages = Math.ceil(slides.scrollWidth / slideWidth);
+    for (let i = 0; i < totalPages; i++) {
+      const page = document.createElement("span");
+      page.textContent = i + 1;
+      page.addEventListener("click", function() {
+        slides.scrollLeft = i * slideWidth;
+      });
+      pager.appendChild(page);
+    }
+  
+    // Обработчики для кнопок прокрутки
+    prevButton.addEventListener("click", function() {
+      slides.scrollLeft -= slideWidth;
+    });
+  
+    nextButton.addEventListener("click", function() {
+      slides.scrollLeft += slideWidth;
+    });
+  
+    // Обновляем текущую страницу при прокрутке
+    slides.addEventListener("scroll", function() {
+      const currentPage = Math.floor(slides.scrollLeft / slideWidth) + 1;
+      const pageButtons = pager.querySelectorAll("span");
+      pageButtons.forEach((button, index) => {
+        if (index + 1 === currentPage) {
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      });
+    });
+  });
+  
